@@ -1,0 +1,95 @@
+name: Feature request
+description: Propose a new capability or improvement.
+title: "[FEATURE] "
+labels:
+  - enhancement
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to propose a new capability or meaningful improvement.
+
+        Focus first on the problem and expected value, not on a specific technical solution.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem or limitation should this feature solve?
+      placeholder: Describe the current problem or unmet need.
+    validations:
+      required: true
+
+  - type: textarea
+    id: users
+    attributes:
+      label: Users affected
+      description: Who would benefit from this feature?
+      placeholder: User, administrator, visitor, internal team, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected outcome
+      description: Describe the result that should be possible after implementing this feature.
+      placeholder: What should users be able to achieve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Optional. Describe a possible solution without assuming it is the final implementation.
+      placeholder: Suggested approach, flow, or behavior.
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Describe observable conditions that would indicate the feature works correctly.
+      placeholder: |
+        - User can...
+        - System should...
+        - Given..., when..., then...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Suggested priority
+      description: How important is this feature relative to the current project scope?
+      options:
+        - Could — Useful but not necessary
+        - Should — Important but not essential for the current release
+        - Must — Required for the product to fulfill its current purpose
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies or constraints
+      description: Mention related requirements, integrations, architectural constraints, or other issues.
+      placeholder: RF-XXX, ADR-XXXX, #123, external API, etc.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional. Describe other ways the problem could be solved.
+      placeholder: Alternative workflows or solutions.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched for an existing feature request covering the same need.
+          required: true
+        - label: This request describes a problem or user need, not only a preferred technology.
+          required: true

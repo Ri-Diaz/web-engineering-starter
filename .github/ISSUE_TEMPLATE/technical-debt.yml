@@ -1,0 +1,111 @@
+name: Technical debt
+description: Register known technical debt that should be addressed later.
+title: "[TECH DEBT] "
+labels:
+  - technical-debt
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to document a known technical compromise, limitation, or temporary solution.
+
+        Technical debt is acceptable when it is explicit, understood, and managed.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Technical debt
+      description: Describe the current limitation or compromise.
+      placeholder: What is currently implemented and why is it considered technical debt?
+    validations:
+      required: true
+
+  - type: textarea
+    id: origin
+    attributes:
+      label: Origin
+      description: Explain why this debt exists.
+      placeholder: Time constraint, legacy code, temporary workaround, migration, missing abstraction, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Describe the current or potential consequences.
+      placeholder: Maintenance cost, performance, security, complexity, developer experience, scalability, etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      description: What is the risk of leaving this debt unresolved?
+      options:
+        - Low — Limited impact and unlikely to cause problems soon
+        - Medium — May increase maintenance cost or create future issues
+        - High — Significant reliability, security, scalability, or maintainability risk
+        - Critical — Immediate operational, security, or data integrity risk
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: When should this debt reasonably be addressed?
+      options:
+        - Low — Can remain for the foreseeable future
+        - Medium — Should be addressed during normal maintenance
+        - High — Should be addressed soon
+        - Immediate — Should block or interrupt other work
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed resolution
+      description: Describe the preferred direction for resolving the debt, if known.
+      placeholder: Refactor, migration, dependency replacement, architectural change, additional tests, etc.
+
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected areas
+      description: Identify modules, files, services, or architectural areas affected.
+      placeholder: auth/, database layer, deployment, ADR-0003, etc.
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies or blockers
+      description: Mention anything that must happen before this debt can be resolved.
+      placeholder: Related issue, migration, provider change, future release, etc.
+
+  - type: textarea
+    id: exit_criteria
+    attributes:
+      label: Resolution criteria
+      description: How will we know this technical debt has actually been resolved?
+      placeholder: |
+        - Temporary implementation removed
+        - Tests added
+        - Migration completed
+        - Old dependency removed
+        - Documentation updated
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: This represents real technical debt rather than a new feature request.
+          required: true
+        - label: The impact and risk are described clearly enough to prioritize later.
+          required: true

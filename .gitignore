@@ -1,0 +1,62 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local configuration
+*.local
+
+# Dependencies
+node_modules/
+vendor/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build outputs
+dist/
+build/
+out/
+.cache/
+.next/
+.astro/
+
+# Test and coverage outputs
+coverage/
+.coverage
+htmlcov/
+playwright-report/
+test-results/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE / editor temporary files
+*.swp
+*.swo
+*~
+
+# Local database files
+*.sqlite3
+*.db
+
+# Backups
+*.bak
+*.backup

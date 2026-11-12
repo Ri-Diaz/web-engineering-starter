@@ -1,0 +1,83 @@
+name: Bug report
+description: Report unexpected or incorrect behavior.
+title: "[BUG] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug.
+
+        Before submitting, check whether a similar issue already exists.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Bug summary
+      description: Describe the problem clearly and briefly.
+      placeholder: What is happening?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe what should happen instead.
+      placeholder: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the minimum steps required to reproduce the issue.
+      placeholder: |
+        1. Go to...
+        2. Perform...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Select the impact of the issue.
+      options:
+        - Low — Minor problem with little impact
+        - Medium — Function affected but workaround exists
+        - High — Important functionality is blocked
+        - Critical — Data loss, security issue, or system unavailable
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include relevant technical context.
+      placeholder: |
+        OS:
+        Browser:
+        Application version:
+        Environment: Local / Development / Staging / Production
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Additional evidence
+      description: Add logs, screenshots, error messages, or other useful context.
+      placeholder: Paste relevant information here.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched for an existing issue describing the same problem.
+          required: true
+        - label: I removed passwords, tokens, personal data, and other sensitive information.
+          required: true
