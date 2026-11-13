@@ -492,7 +492,7 @@ Antes de merge deben cumplirse, según corresponda:
 
 * `[Riesgo]`
 
-Documento asociado:
+Documento asociado opcional (crear solo si aplica):
 
 `PERFORMANCE.md`
 
@@ -513,7 +513,7 @@ Documento asociado:
 * formularios accesibles;  
 * mensajes de error comprensibles.
 
-Documento asociado:
+Documento asociado opcional (crear solo si aplica):
 
 `ACCESSIBILITY.md`
 
@@ -528,7 +528,7 @@ Documento asociado:
 * `[Requisito]`  
 * `[Requisito]`
 
-Documento asociado:
+Documento asociado opcional (crear solo si aplica):
 
 `SEO.md`
 
@@ -551,7 +551,7 @@ Documento asociado:
 
 **Método de despliegue:** `[ ]`
 
-Documento asociado:
+Documento asociado opcional (crear solo si aplica):
 
 `DEPLOYMENT.md`
 
@@ -586,7 +586,7 @@ Actualmente se utiliza:
 
 `[Descripción]`
 
-Documento asociado:
+Documento asociado opcional (crear solo si aplica):
 
 `BACKUP-RESTORE.md`
 

@@ -1,35 +1,35 @@
-# **`07 — DATA MODEL`**
+﻿# 07 — DATA MODEL
 
-**`Proyecto:`** `[Nombre del proyecto]`  
-**`Versión:`** `1.0`  
-**`Aplicable:`** `WEBAPP / SENSITIVE / STATIC con persistencia`
-
----
-
-## **`1. Propósito`**
-
-`Este documento describe la estructura principal de los datos del sistema, sus relaciones y las reglas necesarias para mantener su integridad.`
-
-`No es necesario completarlo si el proyecto no posee persistencia relevante.`
+**Proyecto:** `[Nombre del proyecto]`  
+**Versión:** `1.0`  
+**Aplicable:** `WEBAPP / SENSITIVE / STATIC con persistencia`
 
 ---
 
-## **`2. Tecnología`**
+## 1. Propósito
 
-**`Base de datos:`** `[PostgreSQL / SQLite / MySQL / otra]`
+Este documento describe la estructura principal de los datos del sistema, sus relaciones y las reglas necesarias para mantener su integridad.
 
-**`Acceso:`**
-
-* `ORM`  
-* `SQL`  
-* `Query Builder`  
-* `Otro`
-
-**`Herramienta:`** `[Django ORM / Prisma / etc.]`
+No es necesario completarlo si el proyecto no posee persistencia relevante.
 
 ---
 
-## **`3. Entidades principales`**
+## 2. Tecnología
+
+**Base de datos:** `[PostgreSQL / SQLite / MySQL / otra]`
+
+**Acceso:**
+
+* ORM  
+* SQL  
+* Query Builder  
+* Otro
+
+**Herramienta:** `[Django ORM / Prisma / etc.]`
+
+---
+
+## 3. Entidades principales
 
 | `Entidad` | `Responsabilidad` | `Módulo propietario` |
 | ----- | ----- | ----- |
@@ -37,27 +37,15 @@
 | `[Pedido]` | `[Descripción]` | `[orders]` |
 | `[Producto]` | `[Descripción]` | `[catalog]` |
 
-`Cada entidad debe tener una responsabilidad clara.`
+Cada entidad debe tener una responsabilidad clara.
 
 ---
 
-## **`4. Relaciones`**
+## 4. Relaciones
 
-`Ejemplo:`
+Ejemplo:
 
-`USER`
-
- `│`
-
- `│ 1`
-
- `│`
-
- `│ N`
-
- `▼`
-
-`ORDER`
+USER
 
  `│`
 
@@ -69,7 +57,19 @@
 
  `▼`
 
-`ORDER_ITEM`
+ORDER
+
+ `│`
+
+ `│ 1`
+
+ `│`
+
+ `│ N`
+
+ `▼`
+
+ORDER_ITEM
 
  `│`
 
@@ -81,23 +81,23 @@
 
  `▼`
 
-`PRODUCT`
+PRODUCT
 
-### **`Relaciones relevantes`**
+### Relaciones relevantes
 
 | `Entidad A` | `Relación` | `Entidad B` | `Eliminación` |
 | ----- | ----- | ----- | ----- |
 | `[User]` | `1:N` | `[Order]` | `[RESTRICT/CASCADE/etc.]` |
 
-`Las cascadas deben justificarse cuando puedan producir pérdida de información.`
+Las cascadas deben justificarse cuando puedan producir pérdida de información.
 
 ---
 
-## **`5. Modelo por entidad`**
+## 5. Modelo por entidad
 
-### **`[Entidad]`**
+### [Entidad]
 
-**`Propósito:`** `[ ]`
+**Propósito:** `[ ]`
 
 | `Campo` | `Tipo` | `Obligatorio` | `Regla` |
 | ----- | ----- | ----- | ----- |
@@ -108,127 +108,127 @@
 
 ---
 
-## **`6. Invariantes`**
+## 6. Invariantes
 
-`Registrar reglas que siempre deben cumplirse.`
+Registrar reglas que siempre deben cumplirse.
 
-`Ejemplo:`
+Ejemplo:
 
-`email debe ser único`
+email debe ser único
 
-`fecha_fin >= fecha_inicio`
+fecha_fin >= fecha_inicio
 
-`total >= 0`
+total >= 0
 
 | `ID` | `Regla` | `Enforcement` |
 | ----- | ----- | ----- |
 | `INV-001` | `[Regla]` | `[DB / App / Ambos]` |
 
-`Cuando sea razonable, las reglas críticas deberían protegerse también en la base de datos.`
+Cuando sea razonable, las reglas críticas deberían protegerse también en la base de datos.
 
 ---
 
-## **`7. Estados`**
+## 7. Estados
 
-`Cuando una entidad tenga un ciclo de vida, definir estados explícitos.`
+Cuando una entidad tenga un ciclo de vida, definir estados explícitos.
 
-`Ejemplo:`
+Ejemplo:
 
-`DRAFT`
-
-  `↓`
-
-`PENDING`
+DRAFT
 
   `↓`
 
-`APPROVED`
+PENDING
 
   `↓`
 
-`COMPLETED`
+APPROVED
 
-`Evitar múltiples booleanos si un único estado representa mejor el dominio.`
+  `↓`
+
+COMPLETED
+
+Evitar múltiples booleanos si un único estado representa mejor el dominio.
 
 ---
 
-## **`8. NULL y valores desconocidos`**
+## 8. NULL y valores desconocidos
 
-`NULL debe tener un significado conocido.`
+NULL debe tener un significado conocido.
 
-`Distinguir cuando sea necesario:`
+Distinguir cuando sea necesario:
 
-`TRUE`
+TRUE
 
-`FALSE`
+FALSE
 
-`UNKNOWN`
+UNKNOWN
 
-`No convertir automáticamente UNKNOWN en FALSE.`
+No convertir automáticamente UNKNOWN en FALSE.
 
 ---
 
-## **`9. Identificadores y formato canónico`**
+## 9. Identificadores y formato canónico
 
-`Definir identificadores importantes:`
+Definir identificadores importantes:
 
 | `Dato` | `Formato` | `Único` |
 | ----- | ----- | ----- |
 | `[email]` | `lowercase normalizado` | `Sí` |
 | `[identificador]` | `[formato]` | `[ ]` |
 
-`Datos como email, teléfono, RUT, SKU o identificadores externos deberían normalizarse cuando corresponda.`
+Datos como email, teléfono, RUT, SKU o identificadores externos deberían normalizarse cuando corresponda.
 
 ---
 
-## **`10. Eliminación`**
+## 10. Eliminación
 
-`Definir estrategia por entidad cuando sea relevante:`
+Definir estrategia por entidad cuando sea relevante:
 
-* `borrado físico;`  
-* `soft delete;`  
-* `inactivación;`  
-* `anulación;`  
-* `archivado.`
+* borrado físico;  
+* soft delete;  
+* inactivación;  
+* anulación;  
+* archivado.
 
-`No tratar estos conceptos como equivalentes.`
+No tratar estos conceptos como equivalentes.
 
-`Por ejemplo:`
+Por ejemplo:
 
-`ANULAR OPERACIÓN`
+ANULAR OPERACIÓN
 
-`≠`
+≠
 
-`ELIMINAR REGISTRO`
+ELIMINAR REGISTRO
 
 ---
 
-## **`11. Datos derivados`**
+## 11. Datos derivados
 
-`Evitar almacenar información que pueda calcularse fácilmente salvo que exista una razón concreta.`
+Evitar almacenar información que pueda calcularse fácilmente salvo que exista una razón concreta.
 
 | `Dato` | `Fuente` | `Persistido` |
 | ----- | ----- | ----- |
 | `[edad]` | `fecha nacimiento` | `No` |
 | `[total]` | `líneas pedido` | `[Sí/No]` |
 
-`Si se persiste un dato derivado, debe existir una fuente de verdad claramente definida.`
+Si se persiste un dato derivado, debe existir una fuente de verdad claramente definida.
 
 ---
 
-## **`12. Clasificación de datos`**
+## 12. Clasificación de datos
 
-`Utilizar cuando corresponda:`
+Utilizar cuando corresponda:
 
-`PUBLIC`
+PUBLIC
 
-`INTERNAL`
+INTERNAL
 
-`PERSONAL`
+PERSONAL
 
-`SENSITIVE`
+SENSITIVE
 
-`SECRET`
+SECRET
 
 | `Dato` | `Clasificación` |
 | ----- | ----- |
@@ -237,140 +237,140 @@
 
 ---
 
-## **`13. Retención`**
+## 13. Retención
 
-`Para información personal o relevante:`
+Para información personal o relevante:
 
 | `Dato` | `Retención` | `Motivo` |
 | ----- | ----- | ----- |
 | `[ ]` | `[ ]` | `[ ]` |
 
-`No conservar información indefinidamente sin una razón.`
+No conservar información indefinidamente sin una razón.
 
 ---
 
-## **`14. Integridad y concurrencia`**
+## 14. Integridad y concurrencia
 
-`Identificar operaciones susceptibles a conflictos.`
+Identificar operaciones susceptibles a conflictos.
 
-`Ejemplos:`
+Ejemplos:
 
-* `reservas;`  
-* `stock;`  
-* `cupos;`  
-* `estados;`  
-* `edición simultánea.`
+* reservas;  
+* stock;  
+* cupos;  
+* estados;  
+* edición simultánea.
 
-**`Estrategia:`** `[transaction / constraint / locking / versioning / no aplica]`
+**Estrategia:** `[transaction / constraint / locking / versioning / no aplica]`
 
 ---
 
-## **`15. Índices`**
+## 15. Índices
 
-`Crear índices según consultas reales.`
+Crear índices según consultas reales.
 
 | `Campo(s)` | `Motivo` |
 | ----- | ----- |
 | `[email]` | `búsqueda frecuente` |
 | `[status, created_at]` | `listado filtrado` |
 
-`No indexar automáticamente todas las columnas.`
+No indexar automáticamente todas las columnas.
 
 ---
 
-## **`16. Migraciones`**
+## 16. Migraciones
 
-`Todos los cambios de esquema deben realizarse mediante migraciones versionadas.`
+Todos los cambios de esquema deben realizarse mediante migraciones versionadas.
 
-`Flujo:`
+Flujo:
 
-`Schema actual`
+Schema actual
 
      `↓`
 
-`Migration`
+Migration
 
      `↓`
 
-`Testing`
+Testing
 
      `↓`
 
-`Deployment`
+Deployment
 
      `↓`
 
-`Verification`
+Verification
 
-`Los cambios destructivos requieren revisión especial.`
-
----
-
-## **`17. Migración de datos`**
-
-`Cuando sea necesario importar información:`
-
-`Fuente`
-
-  `↓`
-
-`Validación`
-
-  `↓`
-
-`Normalización`
-
-  `↓`
-
-`Detección de conflictos`
-
-  `↓`
-
-`Importación`
-
-  `↓`
-
-`Verificación`
-
-`Los importadores no deberían sobrescribir información silenciosamente.`
+Los cambios destructivos requieren revisión especial.
 
 ---
 
-## **`18. Datos de prueba`**
+## 17. Migración de datos
 
-`Preferir:`
+Cuando sea necesario importar información:
 
-* `factories;`  
-* `fixtures sintéticos;`  
-* `datos anonimizados.`
+Fuente
 
-`Evitar utilizar información personal real en ambientes de desarrollo.`
+  `↓`
 
----
+Validación
 
-## **`19. Backup`**
+  `↓`
 
-**`Aplicable:`** `[Sí / No]`
+Normalización
 
-**`Frecuencia:`** `[ ]`
+  `↓`
 
-**`Retención:`** `[ ]`
+Detección de conflictos
 
-**`Restore probado:`** `[Sí / No]`
+  `↓`
 
-`Un backup no se considera confiable si nunca se ha comprobado que puede restaurarse.`
+Importación
 
----
+  `↓`
 
-## **`20. Diagrama definitivo`**
+Verificación
 
-`Insertar aquí ERD o enlace al modelo actualizado.`
-
-`[Diagrama / referencia]`
+Los importadores no deberían sobrescribir información silenciosamente.
 
 ---
 
-## **`21. Riesgos`**
+## 18. Datos de prueba
+
+Preferir:
+
+* factories;  
+* fixtures sintéticos;  
+* datos anonimizados.
+
+Evitar utilizar información personal real en ambientes de desarrollo.
+
+---
+
+## 19. Backup
+
+**Aplicable:** `[Sí / No]`
+
+**Frecuencia:** `[ ]`
+
+**Retención:** `[ ]`
+
+**Restore probado:** `[Sí / No]`
+
+Un backup no se considera confiable si nunca se ha comprobado que puede restaurarse.
+
+---
+
+## 20. Diagrama definitivo
+
+Insertar aquí ERD o enlace al modelo actualizado.
+
+[Diagrama / referencia]
+
+---
+
+## 21. Riesgos
 
 | `Riesgo` | `Impacto` | `Mitigación` |
 | ----- | ----- | ----- |
@@ -378,18 +378,19 @@
 
 ---
 
-## **`22. Checklist`**
+## 22. Checklist
 
-* `Entidades principales definidas.`  
-* `Relaciones documentadas.`  
-* `Invariantes identificadas.`  
-* `Unicidad definida.`  
-* `NULL tiene semántica clara.`  
-* `Estados correctamente modelados.`  
-* `Estrategia de eliminación definida.`  
-* `Datos sensibles identificados.`  
-* `Migraciones controladas.`  
-* `Concurrencia considerada cuando aplica.`  
-* `Índices responden a consultas reales.`  
-* `Backup considerado cuando aplica.`
+* Entidades principales definidas.  
+* Relaciones documentadas.  
+* Invariantes identificadas.  
+* Unicidad definida.  
+* NULL tiene semántica clara.  
+* Estados correctamente modelados.  
+* Estrategia de eliminación definida.  
+* Datos sensibles identificados.  
+* Migraciones controladas.  
+* Concurrencia considerada cuando aplica.  
+* Índices responden a consultas reales.  
+* Backup considerado cuando aplica.
+
 
