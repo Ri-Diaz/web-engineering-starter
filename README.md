@@ -1,4 +1,4 @@
-# Web Engineering Starter
+﻿# Web Engineering Starter
 
 A reusable, stack-agnostic engineering foundation for planning and developing web projects with consistent criteria for product definition, software architecture, security, testing, maintainability, and specification-driven development.
 
@@ -158,7 +158,9 @@ Documentation should evolve when the project changes, but trivial implementation
 web-engineering-starter/
 │
 ├── README.md
-├── constitution.md
+├── .specify/
+│   └── memory/
+│       └── constitution.md
 ├── PROJECT-CONTEXT.md
 │
 ├── docs/
@@ -197,7 +199,7 @@ web-engineering-starter/
 
 ### Engineering Constitution
 
-`constitution.md`
+`.specify/memory/constitution.md`
 
 Defines the engineering principles that govern projects created from this starter.
 
@@ -441,7 +443,7 @@ AI tools should not independently redefine the architecture of a project.
 Before making significant changes, an AI assistant should review:
 
 ```text
-constitution.md
+.specify/memory/constitution.md
 PROJECT-CONTEXT.md
 relevant requirements
 ARCHITECTURE.md
@@ -489,3 +491,4 @@ Proportional architecture
 **Web Engineering Starter v1.0**
 
 The starter should evolve based on lessons learned from real projects rather than hypothetical future requirements.
+

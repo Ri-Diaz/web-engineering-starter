@@ -1,12 +1,12 @@
-# **Web Engineering Starter — Engineering Constitution**
+﻿# Web Engineering Starter — Engineering Constitution
 
-**Versión:** 1.0  
-**Estado:** Borrador inicial  
+**Versión:** 1.0.0  
+**Estado:** Ratificada  
 **Aplicación:** Todos los proyectos derivados de Web Engineering Starter
 
 ---
 
-## **1\. Propósito**
+## 1. Propósito
 
 Esta constitución establece los principios técnicos y de ingeniería que deben guiar el diseño, desarrollo, revisión, despliegue y mantenimiento de los proyectos creados a partir de Web Engineering Starter.
 
@@ -14,9 +14,9 @@ Su objetivo no es eliminar completamente la deuda técnica, sino prevenir deuda 
 
 ---
 
-# **2\. Principios fundamentales**
+# 2. Principios fundamentales
 
-## **I. Simplicidad antes que complejidad**
+## I. Simplicidad antes que complejidad
 
 La solución técnicamente más sencilla que satisfaga los requisitos actuales debe ser preferida frente a alternativas más complejas.
 
@@ -26,11 +26,11 @@ La complejidad debe estar justificada por un problema concreto.
 
 ---
 
-## **II. Arquitectura proporcional al problema**
+## II. Arquitectura proporcional al problema
 
 Todo proyecto debe clasificarse antes de seleccionar su arquitectura.
 
-### **Perfil Static**
+### Perfil Static
 
 Adecuado para:
 
@@ -49,7 +49,7 @@ Preferencias:
 * alta performance;  
 * SEO.
 
-### **Perfil Web Application**
+### Perfil Web Application
 
 Adecuado para:
 
@@ -62,7 +62,7 @@ Adecuado para:
 
 Debe incorporar separación explícita entre responsabilidades y módulos.
 
-### **Perfil Sensitive**
+### Perfil Sensitive
 
 Adecuado para sistemas que procesen:
 
@@ -76,7 +76,7 @@ Además de las reglas anteriores debe implementar controles reforzados de seguri
 
 ---
 
-## **III. Monolito modular como arquitectura inicial**
+## III. Monolito modular como arquitectura inicial
 
 Las aplicaciones comenzarán preferentemente como monolitos modulares.
 
@@ -88,7 +88,7 @@ No se adoptará arquitectura distribuida anticipadamente.
 
 ---
 
-## **IV. Specification before implementation**
+## IV. Specification before implementation
 
 Una funcionalidad relevante debe describirse antes de implementarse.
 
@@ -105,7 +105,7 @@ El código constituye la implementación de una decisión previamente descrita.
 
 ---
 
-## **V. Separación de responsabilidades**
+## V. Separación de responsabilidades
 
 Cada módulo debe tener una responsabilidad claramente identificable.
 
@@ -120,7 +120,7 @@ Las abstracciones deben aparecer cuando exista una necesidad real y no anticipad
 
 ---
 
-## **VI. Uso justificado de patrones**
+## VI. Uso justificado de patrones
 
 Los patrones de diseño son herramientas y no requisitos arquitectónicos.
 
@@ -135,7 +135,7 @@ No se deben introducir patrones únicamente para aumentar artificialmente la est
 
 ---
 
-## **VII. Seguridad por defecto**
+## VII. Seguridad por defecto
 
 La seguridad debe considerarse durante el diseño y no después de la implementación.
 
@@ -157,7 +157,7 @@ Las credenciales nunca deben almacenarse dentro del repositorio.
 
 ---
 
-## **VIII. Privacidad y minimización de datos**
+## VIII. Privacidad y minimización de datos
 
 Los proyectos que procesen datos personales deben:
 
@@ -173,7 +173,7 @@ La privacidad debe incorporarse desde el diseño.
 
 ---
 
-## **IX. Calidad verificable**
+## IX. Calidad verificable
 
 La calidad del software no debe depender únicamente de revisión manual.
 
@@ -191,7 +191,7 @@ Una modificación que rompa estos controles no debe integrarse a la rama princip
 
 ---
 
-## **X. Testing basado en riesgo**
+## X. Testing basado en riesgo
 
 El objetivo de las pruebas no será alcanzar arbitrariamente un porcentaje específico de cobertura.
 
@@ -214,7 +214,7 @@ Se utilizarán diferentes niveles cuando correspondan:
 
 ---
 
-## **XI. Accesibilidad desde el diseño**
+## XI. Accesibilidad desde el diseño
 
 La accesibilidad no debe ser una corrección posterior.
 
@@ -232,7 +232,7 @@ WCAG debe utilizarse como referencia cuando corresponda.
 
 ---
 
-## **XII. Performance con presupuesto**
+## XII. Performance con presupuesto
 
 Todo proyecto web debe definir objetivos de rendimiento proporcionales a su uso.
 
@@ -249,7 +249,7 @@ Las optimizaciones complejas deben basarse en mediciones.
 
 ---
 
-## **XIII. Dependencias mínimas**
+## XIII. Dependencias mínimas
 
 Antes de instalar una nueva dependencia debe evaluarse:
 
@@ -264,7 +264,7 @@ Una dependencia no debe instalarse por conveniencia si introduce más coste que 
 
 ---
 
-## **XIV. Decisiones arquitectónicas documentadas**
+## XIV. Decisiones arquitectónicas documentadas
 
 Toda decisión que afecte significativamente la arquitectura debe registrarse mediante un Architecture Decision Record (ADR).
 
@@ -282,7 +282,7 @@ Una nueva decisión debe generar un nuevo ADR que reemplace al anterior.
 
 ---
 
-## **XV. Observabilidad proporcional**
+## XV. Observabilidad proporcional
 
 Las aplicaciones deben proporcionar suficiente información para poder diagnosticar fallos.
 
@@ -300,7 +300,7 @@ Los logs nunca deben exponer secretos o datos personales innecesarios.
 
 ---
 
-# **3\. Gestión de deuda técnica**
+# 3. Gestión de deuda técnica
 
 La existencia de deuda técnica debe hacerse explícita.
 
@@ -319,7 +319,7 @@ La deuda técnica relevante deberá registrarse como issue.
 
 ---
 
-# **4\. Definition of Done**
+# 4. Definition of Done
 
 Una funcionalidad solamente podrá considerarse terminada cuando corresponda:
 
@@ -339,7 +339,7 @@ Una funcionalidad solamente podrá considerarse terminada cuando corresponda:
 
 ---
 
-# **5\. Regla para desviaciones**
+# 5. Regla para desviaciones
 
 Las reglas de esta constitución pueden ser excepcionalmente omitidas cuando exista una razón técnica válida.
 
@@ -355,7 +355,7 @@ La urgencia por sí sola no elimina la obligación de documentar la decisión.
 
 ---
 
-# **6\. Prioridad de decisiones**
+# 6. Prioridad de decisiones
 
 Cuando exista conflicto entre alternativas técnicas se utilizará, en este orden general:
 
@@ -371,11 +371,54 @@ El orden puede variar según los requisitos del proyecto, pero cualquier cambio 
 
 ---
 
-# **7\. Principio final**
+# 7. Principio final
 
 El objetivo del proyecto no es construir la arquitectura más sofisticada.
 
 El objetivo es construir la arquitectura más sencilla que permita mantener correctamente el sistema actual y evolucionarlo de forma controlada.
 
 **Build for today's requirements while preserving reasonable paths for tomorrow's changes.**
+
+
+---
+
+## Governance
+
+Esta constitución es la fuente de autoridad para los principios de ingeniería de los proyectos derivados de Web Engineering Starter.
+
+### Cumplimiento
+
+Las especificaciones, planes de implementación, tareas, revisiones y Pull Requests deben respetar estos principios de forma proporcional al perfil y riesgo del proyecto.
+
+Las reglas específicas de un proyecto pueden ser más estrictas, pero no deben contradecir esta constitución sin una desviación documentada.
+
+### Modificaciones
+
+Toda modificación significativa de esta constitución debe:
+
+1. indicar el motivo del cambio;
+2. identificar principios afectados;
+3. evaluar impacto sobre documentación, arquitectura y procesos existentes;
+4. actualizar los documentos relacionados cuando corresponda;
+5. quedar registrada mediante control de versiones.
+
+### Versionado
+
+La constitución utiliza Semantic Versioning:
+
+- **MAJOR:** eliminación o redefinición incompatible de principios fundamentales;
+- **MINOR:** incorporación de nuevos principios o ampliaciones materiales;
+- **PATCH:** aclaraciones, correcciones editoriales o mejoras que no cambian el significado de las reglas.
+
+### Desviaciones
+
+Cuando una feature o proyecto necesite apartarse de un principio, la desviación debe quedar explícitamente justificada y documentada.
+
+El nivel de formalidad requerido debe ser proporcional al riesgo del proyecto.
+
+### Revisión
+
+El cumplimiento de la constitución debe comprobarse especialmente durante planificación, decisiones arquitectónicas y revisión previa a integración.
+
+**Version**: 1.0.0 | **Ratified**: 2026-11-15 | **Last Amended**: 2026-11-15
 
