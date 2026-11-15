@@ -664,38 +664,14 @@ Estas funcionalidades no deben implementarse anticipadamente.
 
 # **41\. Instrucciones para asistentes de IA**
 
-Antes de proponer o modificar código:
+Las instrucciones operativas para agentes de IA están en `AGENTS.md`. Este documento mantiene la memoria técnica del proyecto y sus decisiones.
 
-1. leer `.specify/memory/constitution.md`;  
-2. leer este documento;  
-3. revisar los ADR relacionados;  
-4. inspeccionar la implementación existente;  
-5. identificar el alcance exacto de la tarea;  
-6. verificar si ya existe funcionalidad equivalente;  
-7. mantener los patrones actuales salvo razón documentada;  
-8. evitar cambios no relacionados;  
-9. mantener compatibilidad existente;  
-10. actualizar pruebas cuando cambie comportamiento.
-
-Antes de añadir una dependencia:
-
-1. explicar qué problema resuelve;  
-2. comprobar si ya existe una alternativa;  
-3. evaluar impacto;  
-4. justificar su incorporación.
-
-Antes de modificar arquitectura:
-
-1. describir el problema;  
-2. identificar alternativas;  
-3. analizar consecuencias;  
-4. crear o actualizar un ADR según corresponda.
 
 ---
 
 # **42\. Fuentes de verdad**
 
-En caso de conflicto, utilizar el siguiente orden:
+La autoridad sobre principios de ingeniería es `.specify/memory/constitution.md`. Para requisitos y decisiones específicas del proyecto, en caso de conflicto utilizar el siguiente orden:
 
 1. requisitos aprobados;  
 2. ADR vigentes;  
