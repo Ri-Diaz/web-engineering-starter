@@ -441,6 +441,64 @@ GitHub Spec Kit is integrated as the default specification-driven workflow while
 
 ---
 
+## Using Spec Kit
+
+GitHub Spec Kit is included in this starter with the neutral `none` integration.
+
+This keeps the template independent from a specific AI coding assistant.
+
+When a new project is created from this template, select the integration that matches the development environment being used.
+
+Examples:
+
+```text
+specify integration switch codex
+specify integration switch copilot
+```
+
+The selected integration belongs to the derived project and does not change the engineering principles defined by the starter.
+
+A typical Spec Kit workflow is:
+
+```text
+Issue / Requirement
+        ↓
+Specify
+        ↓
+Clarify (when needed)
+        ↓
+Plan
+        ↓
+Tasks
+        ↓
+Analyze (when useful)
+        ↓
+Implement
+        ↓
+Converge
+        ↓
+Pull Request
+```
+
+The amount of process should remain proportional to project risk and complexity:
+
+- `STATIC`: usually a lightweight workflow;
+- `WEBAPP`: additional planning, testing, and architectural validation;
+- `SENSITIVE`: stronger clarification, analysis, traceability, security, and validation.
+
+Spec Kit feature artifacts should complement the project's permanent documentation rather than duplicate it.
+
+Permanent project-level decisions remain documented in:
+
+- `.specify/memory/constitution.md`;
+- `PROJECT-CONTEXT.md`;
+- `docs/product/REQUIREMENTS.md`;
+- `docs/architecture/ARCHITECTURE.md`;
+- `docs/architecture/DATA-MODEL.md`, when applicable;
+- Architecture Decision Records, when required.
+
+---
+
 ## AI-assisted development
 
 AI tools should not independently redefine the architecture of a project.
@@ -456,6 +514,8 @@ relevant ADRs
 ```
 
 Existing architectural decisions should be respected unless there is a documented reason to reconsider them.
+
+---
 
 ---
 
