@@ -158,10 +158,15 @@ Documentation should evolve when the project changes, but trivial implementation
 web-engineering-starter/
 │
 ├── README.md
-├── .specify/
-│   └── memory/
-│       └── constitution.md
 ├── PROJECT-CONTEXT.md
+│
+├── .specify/
+│   ├── integrations/
+│   ├── memory/
+│   │   └── constitution.md
+│   ├── scripts/
+│   ├── templates/
+│   └── workflows/
 │
 ├── docs/
 │   ├── 00-INDEX.md
@@ -190,8 +195,8 @@ web-engineering-starter/
 │
 ├── .editorconfig
 ├── .env.example
+├── .gitattributes
 └── .gitignore
-```
 
 ---
 
@@ -432,7 +437,7 @@ Implementation
 Tests
 ```
 
-GitHub Spec Kit or another specification workflow may be added without changing the core engineering principles of the starter.
+GitHub Spec Kit is integrated as the default specification-driven workflow while preserving the core engineering principles and stack-agnostic nature of the starter.
 
 ---
 
