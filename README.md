@@ -159,6 +159,7 @@ web-engineering-starter/
 │
 ├── README.md
 ├── AGENTS.md
+├── LICENSE
 ├── PROJECT-CONTEXT.md
 │
 ├── .specify/
@@ -191,13 +192,13 @@ web-engineering-starter/
 │
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
-│   ├── workflows/
 │   └── PULL_REQUEST_TEMPLATE.md
 │
 ├── .editorconfig
 ├── .env.example
 ├── .gitattributes
 └── .gitignore
+```
 
 ---
 
@@ -407,13 +408,13 @@ To start a new project:
 
 1. Select **Use this template**.
 2. Create a new repository.
-3. Complete `PROJECT-BRIEF.md`.
-4. Complete `PROJECT-CLASSIFICATION.md`.
+3. Complete `docs/product/PROJECT-BRIEF.md`.
+4. Complete `docs/product/PROJECT-CLASSIFICATION.md`.
 5. Initialize `PROJECT-CONTEXT.md`.
-6. Define requirements.
-7. Design the appropriate architecture.
+6. Define requirements in `docs/product/REQUIREMENTS.md`.
+7. Design the appropriate architecture in `docs/architecture/ARCHITECTURE.md`.
 8. Select the technology stack.
-9. Document significant decisions using ADRs.
+9. Document significant decisions using ADRs in `docs/architecture/adr/`.
 10. Begin implementation.
 
 ---
@@ -551,7 +552,7 @@ Proportional architecture
 
 ## Version
 
-**Web Engineering Starter v1.0**
+**Web Engineering Starter v1.0.0**
 
 The starter should evolve based on lessons learned from real projects rather than hypothetical future requirements.
 

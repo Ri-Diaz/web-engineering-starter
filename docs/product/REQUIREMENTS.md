@@ -43,7 +43,7 @@ No sustituye:
 
 * `PROJECT-BRIEF.md`;  
 * especificaciones detalladas de funcionalidades;  
-* `ARCHITECTURE.md`;  
+* `docs/architecture/ARCHITECTURE.md`;
 * ADR;  
 * planes de prueba.
 

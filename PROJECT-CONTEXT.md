@@ -101,7 +101,7 @@ Esta sección debe evitar expansiones de alcance accidentales.
 
 **Perfil:** `[STATIC | WEBAPP | SENSITIVE]`
 
-**Documento asociado:** `PROJECT-CLASSIFICATION.md`
+**Documento asociado:** `docs/product/PROJECT-CLASSIFICATION.md`
 
 ### **Justificación resumida**
 
@@ -247,7 +247,7 @@ Registrar únicamente entidades relevantes.
 | `[Entidad]` | `[Descripción]` |
 | `[Entidad]` | `[Descripción]` |
 
-El diseño completo debe mantenerse en `DATA-MODEL.md` cuando corresponda.
+El diseño completo debe mantenerse en `docs/architecture/DATA-MODEL.md` cuando corresponda.
 
 ---
 
@@ -437,7 +437,7 @@ Los valores deben mantenerse fuera del repositorio.
 * `[Control]`  
 * `[Control]`
 
-El detalle debe mantenerse en `SECURITY.md`.
+El detalle debe mantenerse en `docs/security/SECURITY.md`.
 
 ---
 
@@ -461,7 +461,7 @@ El detalle debe mantenerse en `SECURITY.md`.
 
 Documento detallado:
 
-`TEST-STRATEGY.md`
+`docs/engineering/TEST-STRATEGY.md`
 
 ---
 
