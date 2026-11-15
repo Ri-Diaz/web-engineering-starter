@@ -168,6 +168,8 @@ Características habituales:
 
 Define los principios generales de ingeniería.
 
+Documento activo: `.specify/memory/constitution.md`.
+
 Contiene reglas relacionadas con:
 
 * simplicidad;  
@@ -518,7 +520,7 @@ No repetir la misma explicación completa en varios documentos.
 
 Preferir:
 
-> La estrategia de seguridad se encuentra definida en `SECURITY.md`.
+> La estrategia de seguridad se encuentra definida en `docs/security/SECURITY.md`.
 
 en lugar de copiar nuevamente toda la estrategia.
 
@@ -549,7 +551,7 @@ Documentación empresarial completa
 
 # **10\. Documentos adicionales**
 
-Los siguientes documentos **no forman parte obligatoria del Starter v1.0**.
+Los siguientes documentos **no forman parte obligatoria del Starter v1.0.0**.
 
 Pueden agregarse cuando exista necesidad:
 
@@ -565,7 +567,7 @@ RUNBOOK.md
 DESIGN-SYSTEM.md  
 API.md
 
-Su incorporación debe justificarse por características reales del proyecto.
+También puede incorporarse `AUDIT.md` si el proyecto lo requiere. La incorporación de estos documentos debe justificarse por características reales del proyecto.
 
 ---
 
@@ -600,15 +602,7 @@ Las specs definen funcionalidades concretas.
 
 # **12\. Uso de IA**
 
-Antes de solicitar modificaciones importantes a una IA, proporcionar o permitir acceso a:
-
-constitution  
-PROJECT-CONTEXT  
-relevant requirements  
-ARCHITECTURE  
-relevant ADR
-
-La IA debe respetar las decisiones existentes antes de proponer cambios estructurales.
+Las instrucciones operativas para agentes de IA están en `AGENTS.md`. Allí se indican las fuentes que deben consultarse antes de cambios significativos; la constitución de ingeniería activa es `.specify/memory/constitution.md`.
 
 ---
 
@@ -631,24 +625,18 @@ No modificar documentación por cambios triviales.
 
 # **14\. Versionado del Starter**
 
-Utilizar versionado:
+Utilizar Semantic Versioning con el formato `MAJOR.MINOR.PATCH`:
 
-v1.0  
-v1.1  
-v1.2  
-v2.0
-
-Ejemplo:
-
-* `1.1`: mejoras compatibles;  
-* `1.2`: nuevas plantillas opcionales;  
-* `2.0`: cambio relevante de metodología.
+* `v1.0.0`: primer release;
+* `v1.0.1`: correcciones compatibles;
+* `v1.1.0`: mejoras compatibles;
+* `v2.0.0`: cambios incompatibles.
 
 ---
 
 # **15\. Estado de la plantilla**
 
-**Versión actual:** `1.0`
+**Versión actual:** `v1.0.0`
 
 Incluye:
 

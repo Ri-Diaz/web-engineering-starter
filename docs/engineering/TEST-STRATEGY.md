@@ -234,7 +234,7 @@ email duplicado
 
 operación rechazada
 
-Las invariantes de DATA-MODEL.md deberían poder verificarse.
+Las invariantes de `docs/architecture/DATA-MODEL.md` deberían poder verificarse.
 
 ---
 
@@ -410,7 +410,7 @@ No realizar pruebas de carga sin una capacidad esperada definida.
 
 ## 18. Seguridad
 
-Las pruebas de seguridad deben alinearse con SECURITY.md.
+Las pruebas de seguridad deben alinearse con `docs/security/SECURITY.md`.
 
 Según el proyecto pueden incluir:
 

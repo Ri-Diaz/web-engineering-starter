@@ -316,7 +316,7 @@ Los lockfiles deben versionarse cuando el ecosistema los utilice.
 
 ## **16\. Datos sensibles y logs**
 
-Clasificar los datos mediante `DATA-MODEL.md`.
+Clasificar los datos mediante `docs/architecture/DATA-MODEL.md`.
 
 No registrar innecesariamente:
 

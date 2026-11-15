@@ -52,7 +52,7 @@ Principios aplicables:
 
 **Perfil:** `[STATIC | WEBAPP | SENSITIVE]`
 
-**Referencia:** `PROJECT-CLASSIFICATION.md`
+**Referencia:** `docs/product/PROJECT-CLASSIFICATION.md`
 
 ### **Implicaciones arquitectónicas**
 

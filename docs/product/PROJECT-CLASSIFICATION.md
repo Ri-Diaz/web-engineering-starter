@@ -499,37 +499,39 @@ Según la clasificación seleccionada deberán habilitarse los documentos corres
 
 ## **STATIC**
 
-* PROJECT-BRIEF.md  
-* PROJECT-CONTEXT.md  
+* `docs/product/PROJECT-BRIEF.md`
+* `PROJECT-CONTEXT.md`
 * DESIGN-SYSTEM.md  
 * ACCESSIBILITY.md  
 * SEO.md  
-  PERFORMANCE.md
+* PERFORMANCE.md
 
-  ## **WEBAPP**
+## **WEBAPP**
 
 Además:
 
-* REQUIREMENTS.md  
-* ARCHITECTURE.md  
-* DATA-MODEL.md  
-* TEST-STRATEGY.md  
-* SECURITY.md  
-  DEPLOYMENT.md
+* `docs/product/REQUIREMENTS.md`
+* `docs/architecture/ARCHITECTURE.md`
+* `docs/architecture/DATA-MODEL.md`
+* `docs/engineering/TEST-STRATEGY.md`
+* `docs/security/SECURITY.md`
+* DEPLOYMENT.md
 
-  ## **SENSITIVE**
+## **SENSITIVE**
 
 Además:
 
 * THREAT-MODEL.md  
 * PRIVACY.md  
-* AUDIT.md  
 * BACKUP-RESTORE.md  
 * INCIDENT-RESPONSE.md  
-  RUNBOOK.md  
-  ---
+* RUNBOOK.md
 
-  # **16\. Revisión de clasificación**
+La auditoría debe estar cubierta en `docs/security/SECURITY.md`, `docs/architecture/ARCHITECTURE.md` u otros documentos adecuados. Crear `AUDIT.md` adicionalmente cuando los requisitos de auditoría, trazabilidad o regulación del proyecto lo justifiquen.
+
+---
+
+# **16\. Revisión de clasificación**
 
 La clasificación debe revisarse cuando ocurra alguno de estos cambios:
 
@@ -542,9 +544,9 @@ La clasificación debe revisarse cuando ocurra alguno de estos cambios:
 * crecimiento operacional significativo;  
 * nuevas obligaciones legales;  
 * cambios relevantes en criticidad.  
-  ---
+---
 
-  # **17\. Decisión final**
+# **17\. Decisión final**
 
 **Clasificación:** `[STATIC / WEBAPP / SENSITIVE]`
 
