@@ -158,6 +158,7 @@ Documentation should evolve when the project changes, but trivial implementation
 web-engineering-starter/
 │
 ├── README.md
+├── AGENTS.md
 ├── PROJECT-CONTEXT.md
 │
 ├── .specify/
@@ -501,19 +502,16 @@ Permanent project-level decisions remain documented in:
 
 ## AI-assisted development
 
-AI tools should not independently redefine the architecture of a project.
+This starter is agent-agnostic. Its guidance and planning documents have distinct roles:
 
-Before making significant changes, an AI assistant should review:
+- `AGENTS.md` provides operational instructions for AI agents.
+- `.specify/memory/constitution.md` defines engineering principles and governance.
+- `PROJECT-CONTEXT.md` is the project's technical memory.
+- Spec Kit provides the specification, planning, and feature workflow.
 
-```text
-.specify/memory/constitution.md
-PROJECT-CONTEXT.md
-relevant requirements
-ARCHITECTURE.md
-relevant ADRs
-```
+For significant changes, agents should follow `AGENTS.md` and consult the relevant project sources it identifies. Spec Kit feature artifacts complement permanent project documentation rather than replace it.
 
-Existing architectural decisions should be respected unless there is a documented reason to reconsider them.
+The template retains Spec Kit's neutral `none` integration. A derived project may select an integration for its development environment without changing this starter's agent-agnostic character.
 
 ---
 
