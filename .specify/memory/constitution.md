@@ -1,4 +1,4 @@
-﻿# Web Engineering Starter — Engineering Constitution
+# Web Engineering Starter — Engineering Constitution
 
 **Versión:** 1.0.0  
 **Estado:** Ratificada  

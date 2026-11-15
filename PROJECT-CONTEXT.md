@@ -1,4 +1,4 @@
-﻿# **PROJECT CONTEXT**
+# **PROJECT CONTEXT**
 
 **Proyecto:** `[Nombre del proyecto]`  
 **Versión:** `0.1`  

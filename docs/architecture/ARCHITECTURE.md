@@ -1,4 +1,4 @@
-﻿# **ARCHITECTURE**
+# **ARCHITECTURE**
 
 **Proyecto:** `[Nombre del proyecto]`  
 **Versión:** `0.1`  

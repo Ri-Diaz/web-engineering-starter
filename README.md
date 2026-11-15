@@ -1,4 +1,4 @@
-﻿# Web Engineering Starter
+# Web Engineering Starter
 
 A reusable, stack-agnostic engineering foundation for planning and developing web projects with consistent criteria for product definition, software architecture, security, testing, maintainability, and specification-driven development.
 
