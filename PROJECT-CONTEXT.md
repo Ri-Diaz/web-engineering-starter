@@ -666,7 +666,7 @@ Estas funcionalidades no deben implementarse anticipadamente.
 
 Antes de proponer o modificar código:
 
-1. leer `constitution.md`;  
+1. leer `.specify/memory/constitution.md`;  
 2. leer este documento;  
 3. revisar los ADR relacionados;  
 4. inspeccionar la implementación existente;  
@@ -763,4 +763,5 @@ No es necesario actualizarlo por cada cambio menor de implementación.
 ## **Próximo hito**
 
 `[Hito]`
+
 

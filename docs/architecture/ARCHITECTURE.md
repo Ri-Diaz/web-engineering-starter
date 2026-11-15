@@ -31,7 +31,7 @@ No debe convertirse en documentación teórica desconectada de la implementació
 
 # **2\. Principios arquitectónicos**
 
-La arquitectura debe respetar los principios definidos en `constitution.md`.
+La arquitectura debe respetar los principios definidos en `.specify/memory/constitution.md`.
 
 Principios aplicables:
 
@@ -1246,4 +1246,5 @@ Antes de aprobar la arquitectura:
 ## **Próxima decisión arquitectónica**
 
 `[ ]`
+
 

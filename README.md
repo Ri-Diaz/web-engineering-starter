@@ -158,8 +158,15 @@ Documentation should evolve when the project changes, but trivial implementation
 web-engineering-starter/
 │
 ├── README.md
-├── constitution.md
 ├── PROJECT-CONTEXT.md
+│
+├── .specify/
+│   ├── integrations/
+│   ├── memory/
+│   │   └── constitution.md
+│   ├── scripts/
+│   ├── templates/
+│   └── workflows/
 │
 ├── docs/
 │   ├── 00-INDEX.md
@@ -188,8 +195,8 @@ web-engineering-starter/
 │
 ├── .editorconfig
 ├── .env.example
+├── .gitattributes
 └── .gitignore
-```
 
 ---
 
@@ -197,7 +204,7 @@ web-engineering-starter/
 
 ### Engineering Constitution
 
-`constitution.md`
+`.specify/memory/constitution.md`
 
 Defines the engineering principles that govern projects created from this starter.
 
@@ -430,7 +437,7 @@ Implementation
 Tests
 ```
 
-GitHub Spec Kit or another specification workflow may be added without changing the core engineering principles of the starter.
+GitHub Spec Kit is integrated as the default specification-driven workflow while preserving the core engineering principles and stack-agnostic nature of the starter.
 
 ---
 
@@ -441,7 +448,7 @@ AI tools should not independently redefine the architecture of a project.
 Before making significant changes, an AI assistant should review:
 
 ```text
-constitution.md
+.specify/memory/constitution.md
 PROJECT-CONTEXT.md
 relevant requirements
 ARCHITECTURE.md
@@ -489,3 +496,4 @@ Proportional architecture
 **Web Engineering Starter v1.0**
 
 The starter should evolve based on lessons learned from real projects rather than hypothetical future requirements.
+
