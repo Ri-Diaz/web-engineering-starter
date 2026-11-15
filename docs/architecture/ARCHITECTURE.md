@@ -921,23 +921,11 @@ Los valores sensibles deben gestionarse externamente.
 
 # **51\. CI/CD**
 
-Pipeline esperado:
+Si el proyecto utiliza CI/CD, definir un pipeline proporcional a su perfil, stack, riesgo y necesidades. No todos los proyectos requieren un pipeline automatizado.
 
-commit  
-   ↓  
-lint  
-   ↓  
-typecheck  
-   ↓  
-tests  
-   ↓  
-security checks  
-   ↓  
-build  
-   ↓  
-deploy
+Las etapas posibles incluyen lint, type checking, tests, security checks, build y deploy. No todas son necesarias en cada proyecto: un proyecto simple puede utilizar solo algunas, mientras que `WEBAPP` y `SENSITIVE` pueden requerir controles adicionales.
 
-El detalle se mantiene en documentación de deployment y workflows.
+Documentar los detalles de deployment o workflows cuando dichos artefactos existan o sean necesarios para el proyecto.
 
 ---
 
